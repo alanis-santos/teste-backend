@@ -9,4 +9,4 @@ def email_valido(email: str) -> bool:
 
     Retorna True se válido, False caso contrário.
     """
-    raise NotImplementedError
+    return " " not in email and email.count("@") == 1 and "." in email

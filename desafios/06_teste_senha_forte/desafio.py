@@ -10,4 +10,11 @@ def senha_forte(senha: str) -> bool:
 
     Retorna True se forte, False caso contrário.
     """
-    raise NotImplementedError
+    if len(senha) < 8:
+        return False
+
+    tem_maiuscula = any(caracter.isupper() for caracter in senha)
+    tem_minuscula = any(caracter.islower() for caracter in senha)
+    tem_numero = any(caracter.isdigit() for caracter in senha)
+
+    return tem_maiuscula and tem_minuscula and tem_numero

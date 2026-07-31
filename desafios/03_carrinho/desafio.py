@@ -6,4 +6,4 @@ def calcular_total_carrinho(carrinho: list[dict]) -> float:
     Retorna o valor total da compra (soma de preco * quantidade).
     Carrinho vazio deve retornar 0.0.
     """
-    raise NotImplementedError
+    return float(sum(item["preco"] * item["quantidade"] for item in carrinho))
